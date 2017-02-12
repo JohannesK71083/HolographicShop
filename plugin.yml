@@ -1,6 +1,6 @@
 name: HolographicShop
 main: org.holographicshop.main.HolographicShop
-version: 1.0.2
+version: 1.0.3
 depend: [HolographicDisplays, Vault]
 commands:
   shop:

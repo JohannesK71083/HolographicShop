@@ -24,6 +24,7 @@ public enum HShopLanguages implements Language{
 	Holo_Open("Open"),
 	Holo_NoFurthurInformation("&cNo furthur information"), 
 	Holo_AmountSelectionDisabled("&cManual amount selection is disabled."), 
+	Holo_AmountPriceFormat("&4[${integer}]Set &6[${double}$]"),
 	
 	Shop_ShopIsNotOpen("Sorry! This shop is not opened yet."),
 	Shop_InvalidPrice("Cannot buy item with this price!"),

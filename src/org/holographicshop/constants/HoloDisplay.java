@@ -100,7 +100,7 @@ public class HoloDisplay {
 		right.appendTextLine("");
 		
 		if(instance.isAdminShop){
-			shopName = center.appendTextLine(ChatColor.YELLOW+"[OP]"+ChatColor.AQUA+instance.shopName
+			shopName = center.appendTextLine(ChatColor.YELLOW+"[OP] "+ChatColor.AQUA+instance.shopName
 					+(instance.type == ShopType.BUY ? ChatColor.GOLD : ChatColor.GREEN)+" ("+instance.type+")");
 		}else{
 			shopName = center.appendTextLine(ChatColor.AQUA+instance.shopName
@@ -171,8 +171,9 @@ public class HoloDisplay {
 	}
 	
 	public void setAmountAndPrice(int amount, double price){
-		itemAmountAndPrice.setText(ChatColor.LIGHT_PURPLE+"["+amount+"]Set "
-				+ChatColor.GOLD+"["+(price*amount)+unit+"]");
+		HolographicShop.getInstance().lang.addInteger(amount);
+		HolographicShop.getInstance().lang.addDouble(price);
+		itemAmountAndPrice.setText(HolographicShop.getInstance().lang.parseFirstString(HShopLanguages.Holo_AmountPriceFormat));
 	}
 	
 	public void setShopOpen(boolean stat){
